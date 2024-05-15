@@ -34,7 +34,6 @@ function resetAll() {
   bmi.innerHTML = ''
   json.innerHTML = ''
   history = []
-  console.log(history)
   form.reset()
   renderHistory()
   historyElement.innerHTML = '<li>Empty</li>'
