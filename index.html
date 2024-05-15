@@ -10,6 +10,9 @@
 
 <body>
   <form onsubmit="calculate(event)">
+    <h2>
+      BMI Calculator
+    </h2>
     <fieldset>
       <label for="height">
         Height (m)
@@ -27,6 +30,16 @@
       <button class="inverted" type="button" onclick="reset()">Reset</button>
     </footer>
   </form>
+  <div class="history">
+    <h6>
+      History
+    </h6>
+    <ul id="history">
+      <li>
+        Empty
+      </li>
+    </ul>
+  </div>
   <dialog id="result">
     <header>
       <h6>
