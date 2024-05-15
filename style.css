@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+form {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 0 0 0.25rem;
+  display: block;
+}
+
+fieldset {
+  border: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+
+button.inverted {
+  background-color: white;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.inverted:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+
+button.close {
+  border-radius: 50%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+button.close:hover {
+  background-color: black;
+  color: white;
+}
+
+dialog {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  min-width: 300px;
+}
+
+dialog header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+dialog h6 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#bmi {
+  font-weight: bold;
+}
+
+dialog pre {
+  white-space: pre-wrap;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}

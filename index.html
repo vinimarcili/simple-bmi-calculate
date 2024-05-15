@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form onsubmit="calculate(event)">
+    <fieldset>
+      <label for="height">
+        Height (m)
+      </label>
+      <input name="height" id="height" type="number" step=".01" placeholder="1.85" required>
+    </fieldset>
+    <fieldset>
+      <label for="weight">
+        Weight (kg)
+      </label>
+      <input name="weight" id="weight" type="number" step=".01" placeholder="85" required>
+    </fieldset>
+    <footer>
+      <button type="submit">Calculate</button>
+      <button class="inverted" type="button" onclick="reset()">Reset</button>
+    </footer>
+  </form>
+  <dialog id="result">
+    <header>
+      <h6>
+        Result
+      </h6>
+      <button class="close" type="button" onclick="closeResult()">
+        X
+      </button>
+    </header>
+    <p>
+      Your BMI is <span id="bmi"></span>
+    </p>
+    <h6>
+      JSON
+    </h6>
+    <pre id="json"></pre>
+  </dialog>
+<script src="script.js"></script>
+</body>
+</html>
