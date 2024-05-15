@@ -1,4 +1,4 @@
-const history = []
+let history = []
 
 function calculate(e) {
   e.preventDefault()
@@ -26,12 +26,18 @@ function calculate(e) {
   form.reset()
 }
 
-function reset() {
-  const form = document.getElementById('form')
-  form.reset()
-  const result = document.getElementById('result')
-  result.innerHTML = ''
+function resetAll() {
+  const form = document.querySelector('form')
+  const bmi = document.getElementById('bmi')
+  const json = document.getElementById('json')
+  const historyElement = document.getElementById('history')
+  bmi.innerHTML = ''
+  json.innerHTML = ''
   history = []
+  console.log(history)
+  form.reset()
+  renderHistory()
+  historyElement.innerHTML = '<li>Empty</li>'
 }
 
 function closeResult() {
